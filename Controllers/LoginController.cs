@@ -19,6 +19,9 @@ namespace NewApp.Controllers
             int userID = loginModel.SelectUser(email, name);
             if (userID != -1)
             {
+
+                HttpContext.Session.SetInt32("UserID", userID);
+
                 // User found, proceed with login logic (e.g., set authentication cookie)
                 // For demonstration, redirecting to a dummy page
                 return RedirectToAction("Index", "Home", new { userID = userID });

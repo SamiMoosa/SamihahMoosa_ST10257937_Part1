@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Options;
+
 namespace NewApp
 {
     public class Program
@@ -8,6 +10,22 @@ namespace NewApp
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            //--------------------------------------------------------------------------------------//
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession( Options =>
+            {
+
+                Options.IdleTimeout = TimeSpan.FromMinutes(120);
+
+
+            } );
+
+
+
+
+            //--------------
 
             var app = builder.Build();
 
@@ -21,6 +39,8 @@ namespace NewApp
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 

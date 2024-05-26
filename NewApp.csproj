@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Images\img1.png" />
+    <None Include="wwwroot\Images\img2.png" />
+    <None Include="wwwroot\Images\img3.png" />
+    <None Include="wwwroot\Images\img4.png" />
+    <None Include="wwwroot\Images\img5.png" />
+    <None Include="wwwroot\Images\img6.png" />
+    <None Include="wwwroot\Images\img7.png" />
+    <None Include="wwwroot\Images\img8.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration" Version="8.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />

@@ -5957,11 +5957,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lab_services_student\\SamihahMoosa_ST10257937_Part1\\NewApp.csproj",
+      "projectUniqueName": "C:\\Users\\lab_services_student\\Desktop\\SamihahMoosa_ST10257937_Part2\\NewApp.csproj",
       "projectName": "NewApp",
-      "projectPath": "C:\\Users\\lab_services_student\\SamihahMoosa_ST10257937_Part1\\NewApp.csproj",
+      "projectPath": "C:\\Users\\lab_services_student\\Desktop\\SamihahMoosa_ST10257937_Part2\\NewApp.csproj",
       "packagesPath": "C:\\Users\\lab_services_student\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lab_services_student\\SamihahMoosa_ST10257937_Part1\\obj\\",
+      "outputPath": "C:\\Users\\lab_services_student\\Desktop\\SamihahMoosa_ST10257937_Part2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

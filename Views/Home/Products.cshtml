@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Products";
+    var products = new List<dynamic>
+    {
+        new { Image = "img1.png", Title = "Abstract Healer", Price = "R 4,000.00" },
+        new { Image = "img4.png", Title = "Calming Waves", Price = "From R 2,000.00" },
+        new { Image = "img3.png", Title = "Mistic Flowers", Price = "From R 3,000.00" },
+        new { Image = "img2.png", Title = "Subtle Nature", Price = "From R 3,500.00" }
+    };
+}
+
+<div class="container mt-4">
+    <!-- Banner Section -->
+    <div class="banner mb-4">
+        <img src="~/Images/ban1.png" class="img-fluid" alt="Banner">
+    </div>
+
+    <div class="row">
+        @foreach (var product in products)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm product-card">
+                    <img src="~/Images/@product.Image" class="card-img-top" alt="@product.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Title</h5>
+                        <p class="card-text">@product.Price</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

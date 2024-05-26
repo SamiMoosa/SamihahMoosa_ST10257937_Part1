@@ -1,22 +1,28 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using NewApp.Models;
 using System.Diagnostics;
+
 
 namespace NewApp.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
+            _httpContextAccessor =httpContextAccessor;
         }
 
-        public IActionResult Index(int userID)
+        public IActionResult Index()
         {
             // Retrieve all products from the database
             List<productTable> products = productTable.GetAllProducts();
+
+            int? userID = _httpContextAccessor.HttpContext.Session.GetInt32("UserID");
 
             // Pass products and userID to the view
             ViewData["Products"] = products;
@@ -36,6 +42,10 @@ namespace NewApp.Controllers
         }
 
         public IActionResult MyWork()
+        {
+            return View();
+        }
+        public IActionResult Products()
         {
             return View();
         }
